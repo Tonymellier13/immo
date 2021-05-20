@@ -1,0 +1,304 @@
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url(../images/tree-736885__340.webp);
+
+  background-size: cover;
+
+  height: 90vh;
+}
+.topbouton {
+  position: relative;
+  top: 30vh;
+}
+.navbar ul li:hover {
+  background-color: #0078ac;
+}
+.section1 {
+  background-color: #038fcc;
+}
+
+.services-area {
+  background-color: #f6f6f6;
+}
+.section-title {
+  margin-bottom: 60px;
+}
+.section-title p {
+  color: #777;
+  font-size: 16px;
+}
+.section-title h4 {
+  text-transform: capitalize;
+  font-size: 40px;
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.single-service {
+  border: 1px solid #eee;
+  padding: 30px 10px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.single-service svg {
+  background-color: #038fcc;
+  padding: 10px;
+  font-size: 80px;
+  color: #fff;
+  line-height: 60px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 17%;
+}
+
+.single-service h4 {
+  text-transform: capitalize;
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.section4 div img {
+  padding: 0;
+  height: 283px;
+}
+.section4 div img:hover {
+  animation: heartBeat;
+  animation-duration: 1.3s;
+}
+.
+/*our team*/
+#team {
+  background: #eee !important;
+  padding: 60px 0;
+}
+
+section .section-title1 {
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+#team .card {
+  border: none;
+  background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  border-radius: 0.25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.mainflip {
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  -moz-transform: perspective(1000px);
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.frontside {
+  position: relative;
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.backside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 1s;
+  -moz-transform-style: preserve-3d;
+  -o-transition: 1s;
+  -o-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+  min-height: 312px;
+}
+
+.backside .card a {
+  font-size: 18px;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+  color: #038fcc !important;
+}
+
+.frontside .card .card-body img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+/*our team*/
+/*price*/
+.card-pricing:hover {
+  z-index: 1;
+  background-color: #007bff;
+  color: white;
+}
+.card-pricing .list-unstyled li {
+  padding: 0.5rem 0;
+  color: #6c757d;
+}
+
+.card-pricing:hover .card-header h1,
+.card-pricing:hover .h6,
+.card-pricing:hover .list-unstyled li {
+  color: white !important;
+}
+.card-pricing:hover .boutonh {
+  background-color: white;
+  color: #007bff;
+}
+/*price*/
+
+/*carousel*/
+.yipi {
+  left: initial !important;
+  margin: 16px;
+}
+.carousel-indicators > li {
+  height: 12px;
+  width: 12px;
+
+  border-radius: 50%;
+  position: relative;
+}
+.carousel-inner img {
+  height: 300px;
+}
+.yip {
+  padding: 0;
+  position: absolute;
+  left: -110px;
+}
+.carousel-inner svg {
+  cursor: pointer;
+}
+/*carousel*/
+/*contact form*/
+.contact-form {
+  background: #fff;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  width: 70%;
+}
+.contact-form .form-control {
+  border-radius: 5px;
+}
+.contact-form h3 {
+  text-align: center;
+  color: #0062cc;
+}
+.contact-form .btnContact {
+  width: 50%;
+  border: none;
+  border-radius: 10px;
+  padding: 1.5%;
+  background: #007bff;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+.btnContactSubmit {
+  width: 50%;
+  border-radius: 10px;
+  padding: 1.5%;
+  color: #fff;
+  background-color: #0062cc;
+  border: none;
+  cursor: pointer;
+}
+/*contact form*/
+footer {
+  background-color: #038fcc;
+}
+footer svg {
+  background-color: #0078ac;
+  border-radius: 5px;
+}
+
+/**media query 768*/
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: initial;
+  }
+  .navbar ul li {
+    margin: 0px 8px;
+    font-size: 18px;
+  }
+}
+/*media query 576*/
+
+@media (max-width: 576px) {
+  .top {
+    height: 100vh;
+  }
+  .animate__animated.animate__bounce {
+    --animate-duration: 4s;
+  }
+  .navbar ul {
+    flex-direction: initial;
+  }
+  .navbar ul li {
+    margin: 0px 8px;
+    font-size: 13px;
+  }
+  /*price*/
+  .card-pricing:hover .boutonh {
+    background-color: white;
+    color: #007bff;
+  }
+  /*price*/
+}
