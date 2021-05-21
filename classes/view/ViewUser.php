@@ -2,7 +2,7 @@
 class ViewUser
 {
 
-public static function InscriptionUser()
+    public static function FormInscription()
     {
         isset($_POST['ajout']) ? $formSubmit = true : $formSubmit = false;
 ?>
@@ -19,20 +19,26 @@ public static function InscriptionUser()
                     <input type="email" name="mail" id="mail" class="form-control" aria-describedby="mail" value="<?php echo $formSubmit ? $_POST['mail'] : '' ?>" placeholder="Adresse mail" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" name="pass" id="pass" class="form-control" aria-describedby="pass"  placeholder="mot de passe" required>
+                    <input type="password" name="pass" id="pass" class="form-control" aria-describedby="pass" placeholder="mot de passe" required>
                 </div>
 
                 <div class="form-group">
                     <input type="tel" name="tel" id="tel" class="form-control" aria-describedby="tel" value="<?php echo $formSubmit ? $_POST['tel'] : '' ?>" placeholder="Tel" required>
                 </div>
-             
-              
-            
-            
+
+
+
+
                 <button type="submit" id="submit" name="ajout" class="btn btn-primary">Ajouter</button>
                 <button type="reset" name="annuler" class="btn btn-danger">Annuler</button>
             </form>
         </div>
     <?php
+
+    }
+    public static function appelView($lien, $mail)
+    { ?>
+        <div>Lien vers validation<a href="ValidationCompte.php?token=<?php echo $lien ?>&mail=<?php echo $mail ?>">Cliquez ici</a></div>
+<?php
     }
 }
