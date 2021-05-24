@@ -18,7 +18,7 @@
     require_once "../view/ViewTemplate.php";
     require_once "../utils/Utils.php";
 
-    if (isset($_POST['valider'])) {
+    if (isset($_POST['ajout'])) {
 
         $donnees = [$_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['pass'], $_POST['tel']];
      
@@ -30,13 +30,13 @@
 
 
             if (ModelUser::existeMail($_POST['mail'])) {
-                viewTemplate::alert('danger', 'formulaire non ok , pas merci sylvain', 'CreationComp.php');
+                viewTemplate::alert('danger', 'formulaire faux ', 'CreationUser.php');
             } else {
 
                 $toke = mt_rand(10000, 99999);
                 modelUser::ajout($_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['pass'], $_POST['tel'], $toke);
-                viewTemplate::alert('success', 'formulaire ok, merci sylvain', 'CreationComp.php');
-                viewUser::appelView($toke, $_POST['mail']);
+                viewTemplate::alert('success', 'formulaire bon', 'CreationUser.php');
+                viewUser::validationducompte($toke, $_POST['mail']);
             }
         } 
         else {

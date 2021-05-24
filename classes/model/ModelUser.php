@@ -29,7 +29,7 @@ class ModelUser
     }
     public static function existeMail($mail){
         $connexion= connexion();
-        $reqPrep =$connexion->prepare("SELECT* FROM user WHERE mail=:mail");
+        $reqPrep =$connexion->prepare("SELECT * FROM user WHERE mail=:mail");
         $reqPrep->execute([':mail' =>$mail]);
         return $reqPrep->fetch(PDO::FETCH_ASSOC);
 
