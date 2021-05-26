@@ -34,6 +34,7 @@ class ModelUser
         return $reqPrep->fetch(PDO::FETCH_ASSOC);
 
     }
+    
   
 
 }

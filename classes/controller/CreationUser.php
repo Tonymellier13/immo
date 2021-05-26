@@ -30,7 +30,7 @@
 
 
             if (ModelUser::existeMail($_POST['mail'])) {
-                viewTemplate::alert('danger', 'formulaire faux ', 'CreationUser.php');
+                viewTemplate::alert('formulaire faux', 'danger', 'CreationUser.php');
             } else {
 
                 $toke = mt_rand(10000, 99999);
