@@ -9,7 +9,7 @@ if (isset($_GET['mail']) && isset($_GET['token'])) {
 
         ModelUser::validation($_GET['mail']);
      
-        viewTemplate::alert('primary', 'connexion reussi',  'CreationUser.php');
+        viewTemplate::alert('primary', 'connexion reussi',  'ConnexionUser.php');
          // renvoyer vers la page connexion 
     } else {
         viewTemplate::alert('danger', 'connexion impossible ',  'CreationUser.php');

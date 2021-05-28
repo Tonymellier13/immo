@@ -36,9 +36,32 @@ class ViewUser
     <?php
 
     }
-    public static function validationducompte($lien, $mail)
-    { ?>
-        <div>Lien vers validation<a href="ValidationCompte.php?token=<?php echo $lien ?>&mail=<?php echo $mail ?>">Cliquez ici</a></div>
-<?php
+    public static function mailMdp(){
+        ?>
+        <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST">
+            <div class="container">
+                <h2 class="mb-md-4">Mot de passe oublié</h2>
+                <label class="form-group">Adresse mail</label>
+                <input type="email" class="form-control" name="mail">
+                <button type="submit" class="btn btn-primary mb-md-4 mt-md-4" name="mailMdp">Valider</button>
+            </div>
+        </form>
+        <?php
     }
+    public static function resetMdp($mail){
+        ?>
+        <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST">
+            <div class="container">
+                <h2 class="mb-md-4">Mot de passe oublié</h2>
+                <input type="hidden" class="form-control" value="<?= $mail?>" name="mail1">
+                <label class="form-group">Nouveau mot de passe</label>
+                <input type="password" class="form-control" name="pass2">
+                <label class="form-group">Confirmer nouveau mot de passe</label>
+                <input type="password" class="form-control" name="pass3">
+                <button type="submit" class="btn btn-primary mb-md-4 mt-md-4" name="validerMdp">Valider</button>
+            </div>
+        </form>
+    <?php
+    }
+
 }

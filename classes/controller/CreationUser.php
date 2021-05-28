@@ -33,10 +33,10 @@
                 viewTemplate::alert('formulaire faux', 'danger', 'CreationUser.php');
             } else {
 
-                $toke = mt_rand(10000, 99999);
+                $toke = uniqid();
                 modelUser::ajout($_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['pass'], $_POST['tel'], $toke);
                 viewTemplate::alert('success', 'formulaire bon', 'CreationUser.php');
-                viewUser::validationducompte($toke, $_POST['mail']);
+                
             }
         } 
         else {

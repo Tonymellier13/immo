@@ -31,17 +31,12 @@
 
 
 
-        if (isset($table['mail'])) {
-            viewTemplate::alert('mail trouver', 'success', 'ConnexionUser.php');
-            if (password_verify($_POST['pass'], $table['pass']))
-            {
-                viewTemplate::alert('pass ok', 'success', 'ConnexionUser.php');
-            }       // verifier mdp   le $ table passe c'est le mdp que on hasher rechercher depuis tout a lheure 
-            else{
-                viewTemplate::alert('pass incorect', 'danger', 'ConnexionUser.php');
-            }
-        } else {
-            viewTemplate::alert('mail existe pas', 'danger', 'ConnexionUser.php');
+        viewTemplate::alert('mail trouver', 'success', 'ConnexionUser.php');
+        if (password_verify($_POST['pass'], $table['pass'])) {
+            viewTemplate::alert('pass ok', 'success', 'ConnexionUser.php');
+        }       // verifier mdp   le $ table passe c'est le mdp que on hasher rechercher depuis tout a lheure 
+        else {
+            viewTemplate::alert('pass incorect', 'danger', 'ConnexionUser.php');
         }
     } else {
         ViewConnexion::Formconnexion();
