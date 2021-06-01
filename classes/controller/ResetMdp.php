@@ -1,6 +1,4 @@
-</head>
 
-<body>
 
     <?php
     require_once "../view/ViewUser.php";
@@ -17,7 +15,7 @@
             var_dump("non ok");
         }
     } elseif (isset($_POST['validerMdp'])) {
-        ($_POST['pass2'] === $_POST['pass3']) ? ModelUser::resetMdp($_POST['mail1'], $_POST['pass2']) . viewTemplate::alert('success','Changement de mdp confirmer','Connexionuser'): var_dump("non");
+        ($_POST['pass2'] === $_POST['pass3']) ? ModelUser::resetMdp($_POST['mail1'], $_POST['pass2']) . viewTemplate::alert('success','Changement de mdp confirmer','Connexion.User'): var_dump("non");
     } else {
         viewUser::mailMdp();
        
